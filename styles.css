@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgba(30, 30, 30, 0.9);
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #66bb6a;
+    text-shadow: 0 0 10px rgba(76, 175, 80, 1), 0 0 20px rgba(76, 175, 80, 1);
+}
+
+.logo {
+    height: 70px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #4caf50;
+    margin: 2px 0;
+    transition: 0.4s;
+}
+
+main {
+    margin-top: 80px;
+    flex: 1;
+    padding-bottom: 80px; /* Espacio para el footer fijo */
+}
+
+section {
+    padding: 45px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#hero {
+    background-image: url('img/fondo.png');
+    /* via.placeholder.com/1200x600?text=Hero+Image */ 
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 240px); /* Ajustado para header y footer fijos */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* margin: auto 25px; */
+    paddin: auto 25px; 
+}
+
+#hero h1 {
+    font-size: 2.6rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7), -1px -1px 10px rgba(255,255,255,0.5);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(76,175,80,0.5), inset -2px -2px rgba(76,175,80,0.3);
+    transition: background-color .3s ease, box-shadow .3s ease, transform .3s ease;
+}
+
+.cta-button:hover {
+    background-color: #66bb6a;
+    box-shadow: -2px -2px 10px rgba(76,175,80,0.7);
+    transform: scale(1.05);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin: 15px auto;
+}
+
+.service-card {
+    background-color: rgba(40, 40, 40, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform .3s ease, box-shadow .3s ease;
+    box-shadow: 4px 4px 15px rgba(76, 175, 80, 0.5);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: -4px -4px 20px rgba(76, 175, 80, 0.7);
+}
+
+.service-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.service-card ul li {
+    margin-bottom: 5px;
+}
+
+.buy-button {
+    display: inline-block;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 10px;
+    transition: background-color .3s ease, box-shadow .3s ease;
+}
+
+.buy-button:hover {
+    background-color: #66bb6a;
+    box-shadow: -2px -2px 10px rgba(76, 175, 80, 0.7);
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.testimonial-slider {
+    overflow: hidden;
+}
+
+.testimonial {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#contactForm {
+    display: grid;
+    gap: 20px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: inset -2px -2px 5px rgba(76, 175, 80, 0.3);
+}
+
+#contactForm button {
+    background-color: #4caf50;
+    box-shadow: -2px -2px 10px rgba(76, 175, 80, 0.7);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color .3s ease, box-shadow .3s ease, transform .3s ease;
+}
+
+#contactForm button:hover {
+    background-color: #66bb6a;
+    box-shadow: -4px -4px 15px rgba(76, 175, 80, 0.9);
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: rgba(34, 34, 34, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: inset 0 4px 10px rgba(76, 175, 80, 0.7);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: #4caf50;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color .3s ease;
+}
+
+.social-links a:hover {
+    color: #66bb6a;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 90px; /* Ajustado para no solapar con el footer */
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-decoration: none;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    transition: background-color .3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+}
+
+@media (max-width: 770px) {
+    nav ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav.active ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(30, 30, 30, 0.9);
+        padding: 20px;
+    }
+
+    nav.active ul li {
+        margin: 10px 0;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+    
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-slider {
+        flex-direction: column;
+    }
+    
+    .testimonial span {
+        font-size: 14px;
+    }
+    
+    .service-card h3 {
+        font-size: 24px;
+    }
+    
+    .service-card p {
+        font-size: 16px;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+
+    .social-links a {
+        font-size: 20px;
+        margin: 0 5px;
+    }
+}
+
+.whatsapp-button {
+    position: fixed;
+    right: 20px;
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajusta para un centrado perfecto */
+    background-color: #25d366;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-decoration: none;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    transition: background-color .3s ease;
+    z-index: 1001; /* Asegura que esté por encima del footer */
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+}
+
+/* Ajuste para el footer */
+footer {
+    z-index: 1000; /* Asegúrate de que este valor sea menor que el del botón de WhatsApp */
+}
+
