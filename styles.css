@@ -180,6 +180,12 @@ section {
     gap: 20px;
 }
 
+#galeria video {
+    display: block;
+    margin: 15px auto; /* Centra el video */
+    padding: 0px 5px;
+}
+
 .gallery-container img {
     width: 100%;
     height: auto;
