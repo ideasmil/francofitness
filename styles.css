@@ -3,7 +3,11 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;   
+}
+
+html {
+  scroll-padding-top: 90px; /* Ajusta este valor según la altura de tu menú */
 }
 
 body {
@@ -82,9 +86,10 @@ main {
 }
 
 section {
-    padding: 45px 20px;
+    padding: 30px 20px;
     max-width: 1200px;
     margin: auto;
+   /*  padding-top: 75px; */
 }
 
 #hero {
